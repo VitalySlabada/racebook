@@ -1,4 +1,5 @@
 package com.example.racebook.enums;
 
-public class dummy {
+public enum District {
+    D16,D17,D18
 }
