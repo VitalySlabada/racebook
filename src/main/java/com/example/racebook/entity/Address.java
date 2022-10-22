@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @Data
 @Entity
@@ -15,8 +17,9 @@ public class Address extends BaseEntity{
 
     private String street;
     private String town;
+    @Enumerated(EnumType.STRING)
     private State state ;
-    private Integer ZIP ;
+    private Integer zip ;
 
 
 

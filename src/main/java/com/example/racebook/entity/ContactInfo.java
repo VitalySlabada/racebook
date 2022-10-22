@@ -13,6 +13,10 @@ import javax.persistence.OneToOne;
 @NoArgsConstructor
 @Where(clause = "is_deleted=false")
 public class ContactInfo extends BaseEntity {
+    public String email;
+    public Long phone;
+    @OneToOne
+    public Address address;
 
 
 

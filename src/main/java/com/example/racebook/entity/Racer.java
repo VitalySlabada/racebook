@@ -9,10 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -36,9 +33,12 @@ public class Racer extends BaseEntity {
     private ContactInfo contactInfo;
 
     private Integer age;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
     private District district;
+    @Enumerated(EnumType.STRING)
     private RaceClass raceClass;
+    @Enumerated(EnumType.STRING)
     private BikeModel bikeModel;
     private Integer displacement;
 
